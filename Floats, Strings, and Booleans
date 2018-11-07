@@ -1,0 +1,20 @@
+/*Floating Point Types
+Floating Point Types are also specified by their bit-size BUT, an increase in bit width equates to an increase in precision, NOT range.*/
+
+/*Two Floating Point Types in Go:
+  Float32 and Float64; Use float64 as a general purpose float*/
+/*Also two complex number types:
+  Complex64 and Complex128*/
+
+/*Strings: Are arrays of bytes or runes; in other words, a collection of characters held within a container to be used for different purposes.
+ >Can be enclosed with either '' or ""
+ >Back-ticked ('') strings can contain new lines
+ >Double qouted strings can contain special chars like \n (new line) or \t (tab)
+ >Strings can be indexed: "Go"[1] will return 111, the ASCII code of the letter "o" in "Go" remember - indexes start at [0], asking for [1] is really asking for 2nd char 'properties'
+ >The first index of a  string is 0 (All arrays in Go-Lang are zero-based.)*/
+
+ /*Booleans: True or False evaluation.
+ >True and False are defined.
+ >There are 3 boolean operators: && (and), || (or), and ! (not).
+ >All relational operators return true or false (a boolean).
+ >Relational Operators include: == (is equal to), != (not equal to), > (greater than), < (less than), >= (greater than or equal to), and <= (less than or equal to)*/

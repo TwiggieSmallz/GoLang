@@ -1,0 +1,13 @@
+/*Range & Len of an Array*/     //len - length of an arrays index
+package main
+  import "fmt"
+    func main (){
+    scores := [8]float64{87.3, 92.0, 100, 78.9, 84, 98, 72.6, 64}
+      fmt.Printf("Scores:%v\n", scores)
+        avg := 0.0
+          for i := range scores {
+          avg += scores[i]
+          avg = avg / float64(len(scores))
+          }
+    }
+//It is possible in Go to "cast" to different var types but this must always be an "up-cast" such that whatever we're casting too is bigger than what we cast from.

@@ -1,0 +1,67 @@
+/*Assignment, Declaration, & Rules*/
+
+/*Go-Lang is "strongly typed", meaning that a variable always has only a single, specific type.
+Variables are declared by: 1. using keyword "var" (no quotes), followed by 2. a user-given "name" (no quotes), which is then followed by 3. the variables "type" (int, str, etc.), and lastly, 4. an "optional assignment"
+Ex.:*/
+  var greeting string = "Hello, world!"
+/* 1.    2.      3.           4.       <= (The numbers below match the corresponding word in the explanation on line #4)*/
+
+/*The compiler will infer a type if none is given, like:
+var age = 42 //compiler infers an int for '42' or var pi = 3.14 //compiler infers float64*/
+
+/*Shortcut Assignment - Type inference can be used to assign a value to a new variable name using the ":=" operator
+Ex.:*/
+x := 42 /*is the same as*/ var x = 42
+/*BUT, this syntax can NEVER be used outside of functions!*/
+
+/*Inference Rules - If a non-typed var or ":=" declaration is made:
+>Anything that appears to be an integer will be typed as an int.
+>If appears to be a float, then infers float64
+>If appears to be a complex number, infers complex128.*/
+
+/*Program Structure: Every program written in Go has to have a "package main" which defines the entry point package for a Go program; must also have package names at each new instance.
+Most programs written in Go will depend on the importation of other packages/libraries.*/
+
+/*Semicolons are optional in Go; they're "statement terminator" characters.
+Go's IDE lexar is inferring their placement and "adding them" when a program is run.
+Also, there cannot be opening curly braces on their own line else - syntax error: unexpected semicolon or new line before {*/
+
+/*Global Var Declaration:*/
+package main
+  import "fmt"
+var a int = 3
+var b int = 5
+  func main (){
+  fmt.Printf("Hello, world!\n")
+  fmt.Printf("%v = %v =%v\n", a, b, a + b) /*The %v prints the value of defined vars, which are included at the end and separated with commas for each argument*/
+  }
+
+/*Shorthand Var Declaration*/
+package main
+  import "fmt"
+  var (
+  a int = 3
+  b int = 5
+  )
+  func main () {
+  fmt.Printf("Hello, world!\n")
+  fmt.Printf("%v = %v =%v\n", a, b, a + b)
+  }
+
+/*Single-line Var Declaration*/
+package main
+  import "fmt"
+var a,b = 3,5
+  func main () {
+  fmt.Printf("Hello, world!\n")
+  fmt.Printf("%v = %v =%v\n", a, b, a + b)
+  }
+
+/*In-line Var Declaration (:=)*/
+package main
+  import "fmt"
+    func main() {
+    a,b := 3,5
+    fmt.Printf("Hello, world!\n")
+    fmt.Printf("%v = %v =%v\n", a, b, a + b)
+    }

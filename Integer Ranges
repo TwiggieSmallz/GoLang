@@ -1,0 +1,25 @@
+/*Integer Ranges*/
+/*To calculate the range of an unsigned integer: minimum range = 0 and where maximum range = raise bit-size to base 2, then subtract 1 from output:*/
+/* Formula = (2^x)-1 */
+/*Ex:
+  uint16 = (2^16) - 1
+  uint16 = (65,536) - 1
+  uint16 = 65,535 <= range max.
+    Range = [0; 65,535]*/
+
+/*To calculate the range for a signed integer, there is a 2-step process:
+  Step 1: raise bit-size minus 1 to base 2 and multiply the output by negative 1.
+  Step 2: raise bit-size minus 1 to base 2 then subtract 1 from result.
+    Formulas = First step: (2^(x-1) * (-1)) and Second step: (2^(x-1))-1 */
+/*Ex:
+  Step 1:
+    int16 = (2^(16-1) * (-1))
+    int16 = (2^15) * (-1)
+    int16 = 32,768 * (-1)
+    int16 = -32,768 <= range min.
+  Step 2:
+    int16 = (2^(16-1)) - 1
+    int16 = (2^15) - 1
+    int16 = 32,768 - 1
+    int16 = 32,767
+  Range = [-32,768; 32,767]*/
